@@ -27,9 +27,12 @@ shinyUI(fluidPage(
                                      "Exponential" = "Exponential"))))),
     # Show a plot of the generated distribution
     
-    mainPanel(h5("Use the two controls on the left pane to select the type of"),
-              h5("distribution and the sample size (number of observations)",
-              h5("the chart adjust automatically to reflect the effect of sample size")),
+    mainPanel(h5("Use the two controls on the left pane to select:"), 
+              h5("   1. the sample size -number of observations-"),
+              h5("   2. the type of distribution"),
+              h5("The chart adjusts automatically to reflect the effect of sample size on the distribuion."),
+              h5("" , a("ui.R & server.R code in Mauricio Vasquez' Github Repository", href="https://github.com/VasMau/Developing-Data-Products---Final-Assignment")) 
+              ,
              plotOutput("distPlot")
     )
   )	 
